@@ -419,6 +419,109 @@ body {
 }
 
 /* ============================================
+   SHOWCASE
+   ============================================ */
+.showcase-section {
+  background: var(--gray-100);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.showcase-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-200);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: var(--accent-light);
+}
+
+.showcase-thumb {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-thumb.biz { background: linear-gradient(135deg, #6d28d9, #4f46e5); }
+.showcase-thumb.tool { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.showcase-thumb.ai { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
+.showcase-thumb.edu { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.showcase-thumb.fun { background: linear-gradient(135deg, #10b981, #06b6d4); }
+
+.showcase-body {
+  padding: 1.2rem 1.5rem;
+}
+
+.showcase-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.showcase-tag.biz { background: rgba(109,40,217,0.1); color: var(--accent); }
+.showcase-tag.tool { background: rgba(6,182,212,0.1); color: var(--cyan); }
+.showcase-tag.ai { background: rgba(139,92,246,0.1); color: #8b5cf6; }
+.showcase-tag.edu { background: rgba(245,158,11,0.1); color: #d97706; }
+.showcase-tag.fun { background: rgba(16,185,129,0.1); color: #059669; }
+
+.showcase-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.showcase-body p {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.showcase-note {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: var(--gradient-card);
+  border: 1px solid rgba(109,40,217,0.15);
+  border-radius: 12px;
+}
+
+.showcase-note p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.showcase-note strong {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .showcase-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
    PRICING
    ============================================ */
 .pricing-section {
@@ -917,6 +1020,93 @@ footer {
           実際に動くシステムを完成させます。
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="section showcase-section">
+  <div class="section-inner reveal">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">こんなシステムが作れるようになります</h2>
+    <div class="section-subtitle">すべて講師がバイブコーディングで開発した実際のサービスです。プログラミング経験がなくても、ここまで作れます。</div>
+
+    <div class="showcase-grid">
+      <a href="https://leadgenius-ai-search.vercel.app/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb biz">&#128640;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag biz">営業DX</span>
+          <h3>LeadGenius AI</h3>
+          <p>AIがターゲット企業リストを自動生成し、営業メール・問い合わせフォームの送信まで自動化する営業DX SaaS。</p>
+        </div>
+      </a>
+
+      <a href="https://instant-scheduler.vercel.app/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb tool">&#128197;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag tool">業務効率化</span>
+          <h3>Soku-Sch ─ 爆速日程調整</h3>
+          <p>設定したルールに基づき、直近の空き枠候補を瞬時に生成。そのままメールやチャットに貼り付けて使える。</p>
+        </div>
+      </a>
+
+      <a href="https://aio-rouge.vercel.app/dashboard" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb ai">&#9889;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag ai">AI &times; マーケ</span>
+          <h3>AIO Insight</h3>
+          <p>AI検索最適化サービス。パイプライン管理・リード一覧・A/Bテスト・フォローアップ分析まで一気通貫。</p>
+        </div>
+      </a>
+
+      <a href="https://dev-valuator.vercel.app/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb ai">&#128176;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag ai">AI &times; 分析</span>
+          <h3>Dev Valuator</h3>
+          <p>AIがアプリの適正価格・M&Aバリュエーション・リスク分析を自動算出する診断ツール。</p>
+        </div>
+      </a>
+
+      <a href="https://beginai-learning-platform.vercel.app/app/learn" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb edu">&#128218;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag edu">教育プラットフォーム</span>
+          <h3>BeginAI ─ 経営者AI OS</h3>
+          <p>経営者がAIを学べるeラーニングプラットフォーム。ログイン認証・コース管理を完備。</p>
+        </div>
+      </a>
+
+      <a href="https://kpi-manager-omega.vercel.app/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb biz">&#128202;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag biz">経営管理</span>
+          <h3>KPI Manager</h3>
+          <p>重要な経営指標をダッシュボードで一覧管理。数字に基づいた意思決定をサポート。</p>
+        </div>
+      </a>
+
+      <a href="https://fulfill-tokuyama.github.io/train/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb fun">&#128643;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag fun">エンタメ &times; 教育</span>
+          <h3>つぎのえきは？でんしゃクイズ</h3>
+          <p>関西の鉄道路線を楽しく学べる子供向けクイズアプリ。路線マップ付き。</p>
+        </div>
+      </a>
+
+      <a href="https://elevator2-psi.vercel.app/" target="_blank" rel="noopener" class="showcase-card">
+        <div class="showcase-thumb fun">&#127982;</div>
+        <div class="showcase-body">
+          <span class="showcase-tag fun">ゲーム</span>
+          <h3>エレベーターマスター</h3>
+          <p>エレベーターを操作してお客さんを運ぶ知育ゲーム。フリープレイ・お仕事・冒険の3モード搭載。</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="showcase-note">
+      <p>これらはすべて<strong>プログラミング経験ゼロ</strong>から、<strong>バイブコーディング</strong>だけで開発されています。<br>講座を受ければ、あなたもこのレベルのシステムが作れるようになります。</p>
     </div>
   </div>
 </section>
