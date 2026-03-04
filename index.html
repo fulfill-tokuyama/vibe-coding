@@ -552,10 +552,23 @@ body {
 }
 
 .pricing-original {
-  font-size: 1rem;
-  color: var(--gray-600);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gray-400);
   text-decoration: line-through;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+}
+.pricing-discount {
+  display: inline-block;
+  background: #ef4444;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 
 .pricing-price {
@@ -1152,11 +1165,11 @@ footer {
     <h2 class="section-title" style="color: #fff;">料金</h2>
     <div class="pricing-container">
       <div class="pricing-card">
-        <div class="pricing-original">通常価格 100,000円</div>
+        <div class="pricing-original">通常価格 <span style="font-size:1.1em;">&yen;100,000</span><span class="pricing-discount">半額</span></div>
         <div class="pricing-price">
           <span class="yen">&yen;</span>50,000<span class="tax">（税別）</span>
         </div>
-        <div class="pricing-limit">先着10社限定価格</div>
+        <div class="pricing-limit">先着10社限定 ─ 100,000円→50,000円</div>
         <div class="pricing-condition">
           ※ 今月中にお支払いいただける方限定
         </div>
